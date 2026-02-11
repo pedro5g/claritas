@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "_comment_declaration": "generate (.d.ts) files",
+    "declaration": true,
+    "_comment_declarationMap": "generate (.d.ts.map) files for easier debugging of declaration files",
+    "declarationMap": true,
+    "_comment_esModuleInterop": "enable interoperability between CommonJS and ES Modules, allowing default imports from CommonJS modules",
+    "esModuleInterop": true,
+    "_comment_incremental": "enable incremental compilation to improve build times by only recompiling changed files",
+    "incremental": false,
+    "_comment_isolatedModules": "ensure that each file can be safely transpiled without relying on other files, which is important for tools like Babel or SWC that transpile files individually",
+    "isolatedModules": true,
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "_comment_module": "specify the module code generation method, with 'NodeNext' allowing for both CommonJS and ES Module syntax based on file extensions",
+    "module": "NodeNext",
+    "_comment_moduleDetection": "force TypeScript to treat all files as modules, even if they don't have import/export statements",
+    "moduleDetection": "force",
+    "_comment_moduleResolution": "specify how modules are resolved, with 'NodeNext' aligning with Node.js's module resolution strategy for ES Modules",
+    "moduleResolution": "NodeNext",
+    "noUncheckedIndexedAccess": true,
+    "_comment_resolveJsonModule": "allow importing JSON files as modules, enabling type checking and autocompletion for JSON imports",
+    "resolveJsonModule": true,
+    "_comment_skipLibCheck": "skip type checking of declaration files (.d.ts) to improve build performance, especially when using third-party libraries",
+    "skipLibCheck": true,
+    "_comment_strict": "enable all strict type-checking options, providing a more rigorous type system and catching more potential errors during development",
+    "strict": true,
+    "_coment_target": "specify the target JavaScript version for the emitted code, with 'ES2022' providing modern features and syntax",
+    "target": "ES2022"
+  }
+}

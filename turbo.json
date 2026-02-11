@@ -1,0 +1,75 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "remoteCache": {
+    "signature": false
+  },
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "env": [],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist/**"
+      ]
+    },
+    "sitemap": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "public/robots.txt",
+        "public/sitemap*.xml"
+      ]
+    },
+    "deploy": {
+      "dependsOn": [
+        "build",
+        "sitemap"
+      ],
+      "outputs": []
+    },
+    "start": {
+      "dependsOn": [
+        "^start"
+      ],
+      "env": [],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "check-types": {
+      "dependsOn": [
+        "^check-types"
+      ],
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": [],
+    },
+    "dev:worker": {
+      "cache": false,
+      "persistent": true,
+      "env": [],
+    },
+    "clean": {
+      "cache": false,
+      "persistent": true,
+    }
+  }
+}

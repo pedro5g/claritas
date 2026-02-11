@@ -1,0 +1,60 @@
+{
+  "name": "claritas",
+  "version": "0.1.0",
+  "description": "Normalized Reding Platform",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "start": "turbo start",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo clean --concurrency 20 && rimraf node_modules .turbo",
+    "services:up": "docker compose -f docker/docker-compose.dev.yml up -d",
+    "services:down": "docker compose -f docker/docker-compose.dev.yml down",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "claritas",
+    "normalized-reading-platform",
+    "reading",
+    "platform",
+    "education",
+    "learning",
+    "technology",
+    "edtech",
+    "open-source"
+  ],
+  "author": "Pedro5g",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.2.3",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
+    "dotenv": "^17.2.4",
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^16.1.6",
+    "eslint-config-prettier": "^10.1.8",
+    "picomatch": "latest",
+    "plugin-import": "^1.0.52",
+    "prettier": "^3.8.1",
+    "rimraf": "^6.1.2",
+    "turbo": "^2.8.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0",
+    "vite": "latest",
+    "vitest": "^4.0.18"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
+}
